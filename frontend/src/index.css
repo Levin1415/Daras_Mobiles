@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 15% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 15% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 15% 10%;
+    --primary: 18 92% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 100% 97%;
+    --secondary-foreground: 20 25% 20%;
+    --muted: 24 100% 97%;
+    --muted-foreground: 20 15% 40%;
+    --accent: 18 92% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 18 25% 8%;
+    --foreground: 20 30% 98%;
+    --card: 18 30% 10%;
+    --card-foreground: 20 30% 98%;
+    --popover: 18 30% 10%;
+    --popover-foreground: 20 30% 98%;
+    --primary: 16 90% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 18 30% 15%;
+    --secondary-foreground: 20 30% 98%;
+    --muted: 18 25% 14%;
+    --muted-foreground: 20 15% 75%;
+    --accent: 16 90% 60%;
+    --accent-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(248, 113, 113, 0.12), transparent 60%),
+      radial-gradient(circle at 100% 100%, rgba(251, 146, 60, 0.10), transparent 55%);
+    background-attachment: fixed;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

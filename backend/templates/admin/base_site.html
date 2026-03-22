@@ -1,0 +1,12 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | DarasMobiles Admin{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+  <a href="{% url 'admin:index' %}" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:8px;">
+    <span style="font-size:20px;">📱</span>
+    <span style="font-weight:700; font-size:18px; color:#fff; letter-spacing:-0.3px;">DarasMobiles</span>
+  </a>
+</h1>
+{% endblock %}
