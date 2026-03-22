@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-q9@$l_)#y-d0uig^4@!6gz8xan9cq$3ykj#6x#9+jr$o80!j24
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -87,7 +87,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
